@@ -1,1 +1,253 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Maker100 Leaders — AI for Good Geneva 2026</title>
+</head>
+<body style="background-color: skyblue; font-family: sans-serif; padding: 20px;">
+
+<h1>Maker100 Leaders: Robotics, ML &amp; IoT</h1>
+<h2>AI for Good Geneva 2026</h2>
+
+<div style="background: rgba(255,255,255,0.5); padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+    <strong>Presentation Link:</strong> <a href="https://hpssjellis.github.io/maker100-leaders-robotics/public/index.html">hpssjellis.github.io/.../index.html</a><br>
+    <strong>GitHub Repository:</strong> <a href="https://github.com/hpssjellis/maker100-leaders-robotics">github.com/hpssjellis/maker100-leaders-robotics</a>
+</div>
+
+<table style="width: 100%; border-spacing: 10px;">
+    <tr>
+        <td><strong>Number of Slides:</strong></td>
+        <td><input type="text" id="myCountLinks" size="6" value="16"></td>
+    </tr>
+    <tr>
+        <td><strong>Seconds per Slide:</strong></td>
+        <td><input type="text" id="myCountMax" size="60" value="30,60,90,90,120,90,90,90,90,90,90,90,90,100,120,120"></td>
+    </tr>
+    <tr>
+        <td><strong>Translation & Speech:</strong></td>
+        <td>
+            <div id="google_translate_element" style="display: inline-block; margin-right: 20px;"></div>
+            Voice Selector: <select id="mySelect01" onchange="document.getElementById('myVoiceNum').value = this.value; document.getElementById('myNumberSpeak').click();"></select>
+            <input id="myVoiceNum" type="number" style="width: 4em" value="3">
+            <input id="myNumberSpeak" type="button" value="Speak Slide Text" onclick="mySpeakText();">
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<div id="myNumSlides" style="position: sticky; top: 0px; background-color: rgba(135, 206, 235, 0.95); padding: 10px; font-weight: bold; border-bottom: 1px solid #333; z-index: 1000;">
+    Slide Status Dashboard...
+</div>
+
+<div id="myStick" style="position: sticky; top: 45px; background-color: rgba(135, 206, 235, 0.95); padding: 10px; display: block; border-bottom: 2px solid #333; z-index: 999;">
+    <input type="button" value="Play with Audio Track" onclick="myStartPresentation(true);">
+    <input type="button" value="Start No Sound" onclick="myStartPresentation(false);">
+    <input type="button" value="Rewind" onclick="myRewindPresentation();">
+    <input type="button" value="Back" onclick="myBackSlide();">
+    <input type="button" value="Next" onclick="myNextSlide();">
+    <input id="myPause" type="button" value="Pause" onclick="myTogglePause(this);">
+    <input type="button" value="Close All Details" onclick="myToggleDetails(false);">
+    <input type="button" value="Open All Details" onclick="myToggleDetails(true);">
+    <input type="button" value="Hide Toolbar" onclick="this.parentElement.style.display='none';">
+</div>
+
+<div id="myMain" style="margin-top: 30px;">
+
+    <hr><label id="slide-1"></label>
+    <h3><a name="1" href="#1">1</a><br><br>Six Schools. Six Countries. ~$200 per Student.</h3>
+    <h2>Maker100 Leaders: Robotics, ML &amp; IoT. A Global Pilot</h2>
+    <div style="margin: 15px 0;">[Image Placeholder: 6 Schools, 6 Countries, $200 Hardware Cost]</div>
+    <details open style="background: white; padding: 15px; border-radius: 5px; margin-top: 10px;">
+        <summary style="font-weight: bold; cursor: pointer;">The Mission and Numbers.</summary>
+        <p>I am here today with a very specific mission. I am looking for exactly six schools — from six different countries, to pilot the Maker100 Leaders Robotics course for the upcoming academic year.</p>
+        <p>Three to thirty students per school. The hardware cost is roughly $200 USD per student for the XIAO ML kit and all supporting components. I make absolutely nothing from the hardware, but I only support the platform I have stress-tested for years in my own classroom.</p>
+    </details>
+
+    <hr><label id="slide-2"></label>
+    <h3><a name="2" href="#2">2</a><br><br>Nearly a Decade of Classroom Testing</h3>
+    <h2>This is not a prototype. It is a proven course looking for a global stage.</h2>
+    <div style="margin: 15px 0;">[Image Placeholder: Timeline from Portenta H7 to XIAO ESP32-S3]</div>
+    <details open style="background: white; padding: 15px; border-radius: 5px; margin-top: 10px;">
+        <summary style="font-weight: bold; cursor: pointer;">Proven Hardware Generation Adaptability.</summary>
+        <p>This course has been running in a real secondary school classroom in British Columbia, Canada for nearly a decade. It has transitioned across two major microcontroller generations, from the Arduino Portenta H7 to the Seeed Studio XIAO ESP32-S3.</p>
+        <p>The underlying tools are documented in two peer-reviewed arXiv preprints: 2604.23012 and 2604.22834. The curriculum lives openly on GitHub under an MIT license.</p>
+    </details>
+
+    <hr><label id="slide-3"></label>
+    <h3><a name="3" href="#3">3</a><br><br>Most Students Only Ever Use AI. These Students Build It.</h3>
+    <h2>The gap between using AI and understanding it is exactly where this course lives.</h2>
+    <div style="margin: 15px 0;">[Image Placeholder: Split view of consuming AI vs constructing microcontrollers]</div>
+    <details open style="background: white; padding: 15px; border-radius: 5px; margin-top: 10px;">
+        <summary style="font-weight: bold; cursor: pointer;">Owning the Full Machine Learning Pipeline.</summary>
+        <p>Artificial intelligence is reshaping every industry, but most students only interact with it as consumers. This pilot offers something genuinely different.</p>
+        <p>Students collect their own sensor data, train neural networks directly in a browser, and deploy working AI models onto physical microcontrollers — using both Edge Impulse and fully sovereign browser-based software stacks.</p>
+    </details>
+
+    </div>
+
+<p style="margin-top: 50px;"><a href="#top" onclick="window.scrollTo(0,0); return false;">Top of page</a></p>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=myGoogleTranslateInit"></script>
+<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+<script>
+// State Management Engine
+let myIndex = 0;
+let myLooper = null;
+let myCounting = null;
+let myMainNum = [];
+let myMainNumLast = 30;
+let myCountUp = 0;
+let xSlide = 16;
+let myAudio01 = new Audio('maker100-leaders-ellis.m4a');
+
+// Initialization lifecycle
+window.onload = function() {
+    try {
+        let myVoiceObject = responsiveVoice.getVoices();
+        let myTemp = '';
+        let myAllowedVoices = [1, 2, 3, 13, 14, 16, 18, 24, 29, 30, 34, 37, 39, 42, 43, 49, 54, 57];
+        
+        for (let myLoop = 0; myLoop < myVoiceObject.length; myLoop++) {
+            if (myAllowedVoices.includes(myLoop)) {
+                myTemp += `<option value='${myLoop}'>${myLoop} : ${myVoiceObject[myLoop].name}</option>`;
+            }
+        }
+        document.getElementById('mySelect01').innerHTML = myTemp;
+    } catch(myErr) {
+        console.log("Speech options deferred until API completion hook.");
+    }
+};
+
+function myGoogleTranslateInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+
+// Global View Controls
+function myToggleDetails(myTargetState) {
+    const myDetailsElements = document.querySelectorAll('details');
+    myDetailsElements.forEach(myDetail => {
+        myDetail.open = myTargetState;
+    });
+}
+
+// Runtime Slide Controls
+function mySetup() {
+    xSlide = parseInt(document.getElementById('myCountLinks').value, 10);
+    myMainNum = document.getElementById('myCountMax').value.split(',').map(item => parseInt(item.trim(), 10));
+    myIndex = 0;
+    
+    clearInterval(myLooper);
+    clearInterval(myCounting);
+    myAudio01.pause();
+    myAudio01.currentTime = 0;
+    myCountUp = -1;
+}
+
+function myStartPresentation(myPlayAudio) {
+    mySetup();
+    if (myPlayAudio) {
+        myAudio01.play().catch(myErr => console.log("Audio play blocked until direct user contact interaction event."));
+    }
+    myCarousel();
+}
+
+function myCarousel() {
+    clearInterval(myCounting);
+    myCountUp = -1;
+    myIndex++;
+    
+    if (myIndex > xSlide) { 
+        myIndex = xSlide; 
+    }
+    
+    // Smooth scroll routing to targets
+    const myTargetLabel = document.getElementById('slide-' + myIndex);
+    if (myTargetLabel) {
+        myTargetLabel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        window.location.href = '#' + myIndex;
+    }
+
+    if (Number.isInteger(myMainNum[myIndex - 1])) {
+        myMainNumLast = myMainNum[myIndex - 1];
+    }
+    
+    myCountDown();
+    myCounting = setInterval(myCountDown, 1000);
+    myLooper = setTimeout(myCarousel, myMainNumLast * 1000);
+}
+
+function myResumeCarousel() {
+    myCounting = setInterval(myCountDown, 1000);
+    let myRemainingTime = (myMainNumLast - myCountUp) * 1000;
+    myLooper = setTimeout(myCarousel, myRemainingTime);
+}
+
+function myCountDown() {
+    myCountUp++;
+    if (myCountUp >= myMainNumLast) {
+        myCountUp = myMainNumLast;
+    }
+    
+    let myStatusBox = document.getElementById("myNumSlides");
+    if (myIndex >= xSlide && myMainNumLast == myCountUp) {
+        myStatusBox.innerHTML = `Slide ${myIndex} of ${xSlide} slides. ALL DONE. <input type="button" value="Show Control Panel" onclick="document.getElementById('myStick').style.display='block';">`;
+        clearInterval(myCounting);
+        clearInterval(myLooper);
+    } else {
+        myStatusBox.innerHTML = `Slide ${myIndex} of ${xSlide} slides. ${myMainNumLast - myCountUp} seconds remaining. <input type="button" value="Show Control Panel" onclick="document.getElementById('myStick').style.display='block';">`;
+    }
+}
+
+function myNextSlide() {
+    clearInterval(myLooper);
+    myCarousel();
+}
+
+function myBackSlide() {
+    clearInterval(myLooper);
+    clearInterval(myCounting);
+    myIndex = myIndex - 2;
+    if (myIndex < 0) { 
+        myIndex = 0; 
+    }
+    myCarousel();
+}
+
+function myRewindPresentation() {
+    mySetup();
+    let myStatusBox = document.getElementById("myNumSlides");
+    myStatusBox.innerHTML = "Presentation reset to beginning. Press Start to run.";
+}
+
+function myTogglePause(myButtonInstance) {
+    if (myButtonInstance.value === 'Pause') {
+        clearInterval(myLooper);
+        clearInterval(myCounting);
+        myAudio01.pause();
+        myButtonInstance.value = 'Play / Resume';
+    } else {
+        myResumeCarousel();
+        if (myAudio01.currentTime > 0 && !myAudio01.ended) {
+            myAudio01.play();
+        }
+        myButtonInstance.value = 'Pause';
+    }
+}
+
+async function mySpeakText() {
+    try {
+        let myVoiceIdx = document.getElementById('myVoiceNum').value;
+        let myVoiceName = responsiveVoice.getVoices()[myVoiceIdx].name;
+        let myTextToSpeak = document.getElementById('myMain').innerText;
+        responsiveVoice.speak(myTextToSpeak, myVoiceName, {pitch: 1, rate: 1, volume : 1});
+    } catch (myErr) {
+        console.log("Speech synthesis failure event context caught.");
+    }
+}
+</script>
+</body>
+</html>
